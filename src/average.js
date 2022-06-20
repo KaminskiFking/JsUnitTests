@@ -14,30 +14,25 @@
 const average = (array) => {
   let soma = 0;
 
-  for(let i = 0; i < array.length; i++){
-
-    if(typeof (array[i]) !== 'number') {
-      return undefined
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof (array[i]) !== 'number') {
+      return undefined;
     }
-  };
+  }
    
-  if(array.length === 0){
+  if (array.length === 0) {
+  return undefined;
+  } 
 
-  return undefined
-
-  } else {
-
-  for(let index = 0; index < array.length; index++){
-      soma += array[index]
+  for (let index = 0; index < array.length; index += 1) {
+      soma += array[index];
   }
 
-  soma = Math.round(soma / array.length)
-}
-  return soma
-  console.log(soma)
+  soma = Math.round(soma / array.length);
+
+  return soma;
 };
 
-console.log(average([3,4,5,'5']))
-
+console.log(average([3, 4, 5, '5']));
 
 module.exports = average;
